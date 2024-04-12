@@ -4,43 +4,100 @@
 // License: MIT
 */
 
+
+/*fonts*/
+.rubik-mono one-regular {
+	font-family: "Rubik Mono One", monospace;
+	font-weight: 400;
+	font-style: normal;
+  }
+
+  
+.roboto-medium {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+  }
+
+  
+body h1 {
+	font-family: "Rubik Mono One";
+	
+	margin-left: 30%;
+	margin-bottom: 5%;
+}
+
+body {
+	font-family: "Roboto";
+	
+}
+
 .sudoku-board {
 	min-height: 22.75rem;
 	margin-bottom: 1em;
+	border-radius: 10px;
+	border: 6px solid black;
+
+	
+}
+
+button {
+	background: none;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 5px;
+	height: 50px;
+	width: 80px;
+	font-family: "Rubik Mono One";
+	
+} 
+
+.js-candidate-toggle {
+	margin: 3px;
+}
+
+.align {
+	display:flex;
+	align-items: center;
+	
+	flex-direction: row;
 }
 	/*cell (wrapper) contains both cell input and candidates div*/
 	.sudoku-board-cell {
 		display: inline-block;
 		position: relative;
-		border: 1px solid #ddd;
-		background: white;
+		border: 2px solid #ddd;
+		background: none;
 		max-width: 11.11111%;
+
+		
 	}
 		/*rules for drawing the black lines dividing houses
 			-- specific for board size 9! need diff rules for diff board sizes
 		*/
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(9n+1){
 			border-left-width: 2px;
-			border-left-color: #808080;
+			border-left-color: black;
 		}
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+9){
 			border-top-width: 2px;
-			border-top-color: #808080;
+			border-top-color: black;
 		}
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(3n){
 			border-right-width: 2px;
-			border-right-color: #808080;
+			border-right-color: black;
 		}
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+19):nth-of-type(-n+27),
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+46):nth-of-type(-n+54),
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+73):nth-of-type(-n+81){
 			border-bottom-width: 2px;
-			border-bottom-color: #808080;
+			border-bottom-color: black;
 		}
 
 		/* the input for the value of each cell (i.e. 1-9 or empty for standard sudoku*/
 		.sudoku-board-cell input {
 			background: none;
+			font-family: "Roboto";
 			font-size: 19.2px;
 			font-size: 1.2rem;
 			text-align: center;
@@ -97,8 +154,7 @@
 				width: 20%;
 				line-height: 1.13;
 				vertical-align: top;
-				*display: inline;
-				*zoom: 1;
+				
 			}
 				/*.candidates div*/.candidate--highlight {
 					background-color: yellow;
