@@ -49,8 +49,18 @@ button {
 	height: 50px;
 	width: 80px;
 	font-family: "Rubik Mono One";
+	cursor: pointer;
 	
 } 
+
+.instructions {
+	border: 2px solid black;
+	border-radius: 10px;
+
+}
+.instructions p {
+	margin: 10px;
+}
 
 .js-candidate-toggle {
 	margin: 3px;
