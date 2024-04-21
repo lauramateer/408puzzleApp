@@ -48,15 +48,18 @@
 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script type="text/javascript" src="sudokuJS.js"></script>
+	
 	</head>
 
 	<body>
 	<div class="wrap">
+
+
 		<h1>Sudoku</h1>
 		<h4>HOW TO PLAY</h4>
 		<div class="instructions">
 		<p>A 9×9 square must be filled in with numbers from 1-9 with no repeated numbers in every 3x3 square, row, or column.</p>
-		<br>
+		
 		<p>If the value entered is already in that row or column, a red color background will appear. Delete that value to get rid of the color background and keep playing.</p>
 		</div>
 		<br>
@@ -86,6 +89,20 @@
 		<button type="button" class="js-clear-board-btn"> Clear Board</button>
 		<!--show candidates toggle-->
 		<label for="toggleCandidates">Show candidates </label><input id="toggleCandidates" class="js-candidate-toggle" type="checkbox"/>
+
+		<audio id="audioPlayer">
+			<source src="lofi-study-112191.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		  </audio>
+
+		  <script>
+			document.addEventListener("click", function() {
+			  var audio = document.getElementById("audioPlayer");
+			  audio.play();
+			  // Remove event listener to prevent multiple playback on subsequent clicks
+			  document.removeEventListener("click", arguments.callee);
+			});
+		  </script>
 		
 	</div>
 

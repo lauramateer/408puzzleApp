@@ -4,6 +4,14 @@
 // License: MIT
 */
 
+/*
+#131515
+#91B7C7
+#FF9B71
+ */
+
+
+
 
 /*fonts*/
 .rubik-mono one-regular {
@@ -29,33 +37,40 @@ body h1 {
 
 body {
 	font-family: "Roboto";
+	background-color: #91B7C7;
 	
+}
+
+audio {
+	background: none;
 }
 
 .sudoku-board {
 	min-height: 22.75rem;
 	margin-bottom: 1em;
 	border-radius: 10px;
-	border: 6px solid black;
+	border: 6px solid #131515;
 
 	
 }
 
 button {
 	background: none;
-	border: 2px solid black;
+	border: 2px solid #131515;
 	border-radius: 10px;
 	margin: 5px;
 	height: 50px;
 	width: 80px;
 	font-family: "Rubik Mono One";
 	cursor: pointer;
+	background-color:#FF9B71;
 	
 } 
 
 .instructions {
-	border: 2px solid black;
+	border: 2px solid #131515;
 	border-radius: 10px;
+	background-color:#FF9B71;
 
 }
 .instructions p {
@@ -77,31 +92,31 @@ button {
 		display: inline-block;
 		position: relative;
 		border: 2px solid #ddd;
-		background: none;
+		background-color:#FF9B71;
 		max-width: 11.11111%;
 
 		
 	}
-		/*rules for drawing the black lines dividing houses
+		/*rules for drawing the #131515 lines dividing houses
 			-- specific for board size 9! need diff rules for diff board sizes
 		*/
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(9n+1){
 			border-left-width: 2px;
-			border-left-color: black;
+			border-left-color: #131515;
 		}
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+9){
 			border-top-width: 2px;
-			border-top-color: black;
+			border-top-color: #131515;
 		}
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(3n){
 			border-right-width: 2px;
-			border-right-color: black;
+			border-right-color: #131515;
 		}
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+19):nth-of-type(-n+27),
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+46):nth-of-type(-n+54),
 		[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+73):nth-of-type(-n+81){
 			border-bottom-width: 2px;
-			border-bottom-color: black;
+			border-bottom-color: #131515;
 		}
 
 		/* the input for the value of each cell (i.e. 1-9 or empty for standard sudoku*/
@@ -121,7 +136,7 @@ button {
 
 			/*highlight new input in board cell*/
 			.sudoku-board-cell .highlight-val {
-				color: #00d;
+				
 			}
 			/*highligt incorrect input*/
 			.sudoku-board-cell .board-cell--error {
